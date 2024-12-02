@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Anestetik</title>
+     <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        /* Emoticon Styles */
+        .emot {
+            position: absolute;
+            font-size: 40px;
+            animation: float-up 3s ease-in-out forwards;
+            pointer-events: none; /* Jangan bisa diklik */
+        }
+
+        /* Animasi naik */
+        @keyframes float-up {
+            0% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-300px) scale(1.5);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap" id="effect-area">
+        <div class="header">
+            <h1>Malas Ngoding</h1>
+            <p>Belajar Mengenai Dasar Dasar untuk Membuat Sebuah web yang kece</p>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Html link.html">HTML</a></li>
+                <li><a href="Css link.html">CSS</a></li>
+                <li><a href="Php link.html">PHP</a></li>
+                <li><a href="Javascript link.html">Javascript</a></li>
+            </ul>
+        </div>
+
+        <div class="badan">
+            <div class="sidebar">
+                <h2>Sidebar</h2>
+                <ul>
+                    <li><a href="#">Tutorial HTML Dasar</a></li>
+                    <li><a href="#">Tutorial CSS Dasar</a></li>
+                    <li><a href="#">Tutorial PHP Dasar</a></li>
+                    <li><a href="#">Tutorial JQuery Dasar</a></li>
+                </ul>
+            </div>
+
+            <div class="content">
+                <h2>Content</h2>
+                <p>Selamat datang di website tutorial Malas Ngoding. Di sini kamu akan belajar berbagai dasar pembuatan website yang menarik!</p>
+               <h3>Click anywhere to see magic! 🎉</h3>
+        </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; HALI CODING</p>
+        </div>
+    </div>
+
+    <script>
+        // Referensi elemen area efek
+        const effectArea = document.getElementById('effect-area');
+
+        // Daftar emoticon
+        const emoticons = ['😺', '🐶', '🐼', '🐧', '🐸', '❤️', '🎉', '🌟'];
+
+        // Fungsi untuk membuat emoticon
+        function createEmoticon(x, y) {
+            const emot = document.createElement('span');
+            emot.classList.add('emot');
+            emot.innerText = emoticons[Math.floor(Math.random() * emoticons.length)]; // Pilih emot random
+            emot.style.left = `${x}px`;
+            emot.style.top = `${y}px`;
+            emot.style.color = getRandomColor(); // Warna acak
+
+            // Tambahkan emot ke area
+            effectArea.appendChild(emot);
+
+            // Hapus setelah animasi selesai
+            setTimeout(() => {
+                emot.remove();
+            }, 3000);
+        }
+
+        // Fungsi warna acak
+        function getRandomColor() {
+            return `hsl(${Math.random() * 360}, 80%, 70%)`;
+        }
+
+        // Tambahkan event listener klik
+        effectArea.addEventListener('click', (e) => {
+            const x = e.clientX; // Posisi X klik
+            const y = e.clientY; // Posisi Y klik
+            createEmoticon(x, y); // Buat emoticon di posisi klik
+        });
+    </script>
+</body>
+</html>
