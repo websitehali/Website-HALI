@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP</title>
+    <link rel="stylesheet" href="css.css">
+    <script>
+        function copyCode(id) {
+            const code = document.getElementById(id).innerText;
+            navigator.clipboard.writeText(code)
+                .then(() => {
+                    const button = document.getElementById('copy-btn-php');
+                    button.textContent = "✔ Disalin";
+                    setTimeout(() => button.textContent = "Salin Kode", 2000);
+                })
+                .catch(() => alert("Gagal menyalin kode."));
+        }
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <h1>PHP</h1>
+            <p>Pelajari dasar-dasar PHP untuk memproses data di server.</p>
+        </header>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+              
+            </ul>
+        </nav>
+        <main class="content">
+            <h2>Pengertian PHP</h2>
+            <p>PHP (Hypertext Preprocessor) adalah bahasa pemrograman sisi server yang digunakan untuk membuat halaman web dinamis. PHP dapat mengolah data, menghubungkan ke database, dan menghasilkan output yang ditampilkan di browser.</p>
+            <h3>Contoh Dasar PHP</h3>
+            <div class="code-box">
+                <pre id="php-code">
+&lt;?php
+echo "Halo, dunia!";
+?&gt;
+                </pre>
+                <button id="copy-btn-php" onclick="copyCode('php-code')">Salin Kode</button>
+            </div>
+        </main>
+        <footer class="footer">
+            <p>&copy; HALI CODING</p>
+        </footer>
+    </div>
+</body>
+</html>

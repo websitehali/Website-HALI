@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" href="css.css">
+    <script>
+        function copyCode(id) {
+            const code = document.getElementById(id).innerText;
+            navigator.clipboard.writeText(code)
+                .then(() => {
+                    const button = document.getElementById('copy-btn-css');
+                    button.textContent = "✔ Disalin";
+                    setTimeout(() => button.textContent = "Salin Kode", 2000);
+                })
+                .catch(() => alert("Gagal menyalin kode."));
+        }
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <h1>CSS</h1>
+            <p>Pelajari dasar-dasar CSS untuk mempercantik tampilan halaman web.</p>
+        </header>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                
+            </ul>
+        </nav>
+        <main class="content">
+            <h2>Pengertian CSS</h2>
+            <p>CSS (Cascading Style Sheets) adalah bahasa yang digunakan untuk mengatur gaya dan tata letak elemen pada halaman web. Dengan CSS, kita dapat menentukan warna, ukuran font, margin, padding, dan banyak lagi.</p>
+            <h3>Contoh CSS Dasar</h3>
+            <div class="code-box">
+                <pre id="css-code">
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+                </pre>
+                <button id="copy-btn-css" onclick="copyCode('css-code')">Salin Kode</button>
+            </div>
+        </main>
+        <footer class="footer">
+            <p>&copy; HALI CODING</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="css.css">
+    <script>
+        function copyCode(id) {
+            const code = document.getElementById(id).innerText;
+            navigator.clipboard.writeText(code)
+                .then(() => {
+                    const button = document.getElementById('copy-btn-js');
+                    button.textContent = "✔ Disalin";
+                    setTimeout(() => button.textContent = "Salin Kode", 2000);
+                })
+                .catch(() => alert("Gagal menyalin kode."));
+        }
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <h1>JavaScript</h1>
+            <p>Pelajari dasar-dasar JavaScript untuk menambahkan interaktivitas pada halaman web.</p>
+        </header>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                
+            </ul>
+        </nav>
+        <main class="content">
+            <h2>Pengertian JavaScript</h2>
+            <p>JavaScript adalah bahasa pemrograman yang digunakan untuk menambahkan interaktivitas pada halaman web. Dengan JavaScript, kita dapat membuat elemen dinamis seperti popup, validasi form, dan animasi.</p>
+            <h3>Contoh JavaScript Dasar</h3>
+            <div class="code-box">
+                <pre id="js-code">
+document.getElementById("demo").innerHTML = "Halo, dunia!";
+                </pre>
+                <button id="copy-btn-js" onclick="copyCode('js-code')">Salin Kode</button>
+            </div>
+        </main>
+        <footer class="footer">
+            <p>&copy; HALI CODING</p>
+        </footer>
+    </div>
+</body>
+</html>

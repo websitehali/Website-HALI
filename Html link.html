@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <link rel="stylesheet" href="css.css">
+    <script>
+        function copyCode(id) {
+            const code = document.getElementById(id).innerText;
+            navigator.clipboard.writeText(code)
+                .then(() => {
+                    const button = document.getElementById('copy-btn');
+                    button.textContent = "✔ Disalin";
+                    setTimeout(() => button.textContent = "Salin Kode", 2000);
+                })
+                .catch(() => alert("Gagal menyalin kode."));
+        }
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <h1>HTML</h1>
+            <p>Pelajari struktur dasar HTML dengan contoh dan penjelasan yang mudah dipahami.</p>
+        </header>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+        <main class="content">
+            <h2>Pengertian HTML</h2>
+            <p>HTML (HyperText Markup Language) adalah bahasa yang digunakan untuk membuat struktur halaman web. Dengan HTML, kita dapat menampilkan teks, gambar, tautan, dan elemen lainnya pada sebuah browser.</p>
+            <h3>Contoh Kode Dasar HTML</h3>
+            <div class="code-box">
+                <pre id="html-code">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Halaman Saya&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Selamat Datang&lt;/h1&gt;
+    &lt;p&gt;Ini adalah paragraf pertama.&lt;/p&gt;
+    &lt;a href="https://example.com"&gt;Klik di sini&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                </pre>
+                <button id="copy-btn" onclick="copyCode('html-code')">Salin Kode</button>
+            </div>
+        </main>
+        <footer class="footer">
+            <p>&copy; HALI CODING</p>
+        </footer>
+    </div>
+</body>
+</html>
