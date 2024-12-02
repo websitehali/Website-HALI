@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial CSS Dasar</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="header">
+            <h1>Tutorial CSS Dasar</h1>
+            <p>Panduan lengkap untuk memahami dasar-dasar CSS</p>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </div>
+
+        <div class="badan">
+            <div class="content">
+                <h2>Pengenalan CSS</h2>
+                <p>CSS (Cascading Style Sheets) adalah bahasa yang digunakan untuk mengatur tampilan dan layout sebuah halaman web. Dengan CSS, Anda dapat mengubah warna, font, margin, dan elemen lainnya pada sebuah website.</p>
+
+                <h2>Dasar-Dasar CSS</h2>
+                <ol>
+                    <li>
+                        <strong>Selector</strong>: Elemen yang ingin Anda atur gayanya.  
+                        <pre><code>p { color: red; }</code></pre>
+                        <p>Selector <code>p</code> mengatur semua paragraf agar teksnya berwarna merah.</p>
+                    </li>
+                    <li>
+                        <strong>Property</strong>: Atribut yang ingin Anda ubah, seperti warna, font, atau margin.  
+                        <pre><code>color</code></pre>
+                    </li>
+                    <li>
+                        <strong>Value</strong>: Nilai dari property.  
+                        <pre><code>red</code></pre>
+                    </li>
+                </ol>
+
+                <h2>Menghubungkan CSS ke HTML</h2>
+                <p>Anda bisa menambahkan CSS ke HTML dengan tiga cara:</p>
+                <ol>
+                    <li>
+                        <strong>Inline CSS</strong>: CSS ditulis langsung pada atribut elemen HTML.  
+                        <pre><code>&lt;p style="color: blue;"&gt;Teks berwarna biru&lt;/p&gt;</code></pre>
+                    </li>
+                    <li>
+                        <strong>Internal CSS</strong>: CSS ditulis di dalam tag <code>&lt;style&gt;</code> pada bagian <code>&lt;head&gt;</code>.  
+                        <pre><code>&lt;style&gt;
+p {
+    color: green;
+}
+&lt;/style&gt;</code></pre>
+                    </li>
+                    <li>
+                        <strong>External CSS</strong>: CSS ditulis di file terpisah dengan ekstensi .css.  
+                        <pre><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></pre>
+                    </li>
+                </ol>
+
+                <h2>Selector di CSS</h2>
+                <p>Selector digunakan untuk memilih elemen yang akan diberi gaya. Contoh selector:</p>
+                <ul>
+                    <li><strong>Universal Selector</strong>: <code>*</code> - Memilih semua elemen.</li>
+                    <li><strong>Type Selector</strong>: <code>h1, p</code> - Memilih elemen berdasarkan jenisnya.</li>
+                    <li><strong>Class Selector</strong>: <code>.classname</code> - Memilih elemen berdasarkan kelas.</li>
+                    <li><strong>ID Selector</strong>: <code>#idname</code> - Memilih elemen berdasarkan ID.</li>
+                </ul>
+
+                <h2>Properti CSS Umum</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Properti</th>
+                            <th>Deskripsi</th>
+                            <th>Contoh</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>color</td>
+                            <td>Mengatur warna teks</td>
+                            <td><code>color: red;</code></td>
+                        </tr>
+                        <tr>
+                            <td>background-color</td>
+                            <td>Mengatur warna latar belakang</td>
+                            <td><code>background-color: yellow;</code></td>
+                        </tr>
+                        <tr>
+                            <td>margin</td>
+                            <td>Mengatur jarak luar elemen</td>
+                            <td><code>margin: 10px;</code></td>
+                        </tr>
+                        <tr>
+                            <td>padding</td>
+                            <td>Mengatur jarak dalam elemen</td>
+                            <td><code>padding: 10px;</code></td>
+                        </tr>
+                        <tr>
+                            <td>border</td>
+                            <td>Mengatur batas elemen</td>
+                            <td><code>border: 1px solid black;</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2>Contoh Menggunakan CSS</h2>
+                <p>Berikut contoh kode CSS yang mengatur gaya halaman:</p>
+                <div class="code-box">
+                    <pre>
+<code>
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f4f4f9;
+}
+
+h1 {
+    color: #4caf50;
+    text-align: center;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+</code>
+                    </pre>
+                </div>
+
+                <h2>Kesimpulan</h2>
+                <p>CSS adalah salah satu teknologi penting dalam pengembangan website. Dengan memahami dasar-dasarnya, Anda dapat menciptakan tampilan yang menarik dan responsif.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; HALI CODING</p>
+        </div>
+    </div>
+</body>
+</html>

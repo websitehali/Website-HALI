@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial JavaScript Dasar</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="header">
+            <h1>Tutorial JavaScript Dasar</h1>
+            <p>Panduan lengkap untuk memahami dasar-dasar JavaScript</p>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </div>
+
+        <div class="badan">
+            <div class="content">
+                <h2>Pengenalan JavaScript</h2>
+                <p>JavaScript adalah bahasa pemrograman yang berjalan di sisi klien (client-side) dan digunakan untuk membuat halaman web menjadi lebih interaktif.</p>
+
+                <h2>Dasar-Dasar JavaScript</h2>
+                <ol>
+                    <li>
+                        <strong>Menambahkan JavaScript</strong>: JavaScript dapat ditulis langsung di dalam HTML menggunakan tag <code>&lt;script&gt;</code>.  
+                        <div class="code-box">
+                            <pre><code>&lt;script&gt;
+console.log("Halo, Dunia!");
+&lt;/script&gt;</code></pre>
+                        </div>
+                    </li>
+                    <li>
+                        <strong>Variabel</strong>: JavaScript mendukung deklarasi variabel menggunakan <code>var</code>, <code>let</code>, dan <code>const</code>.  
+                        <div class="code-box">
+                            <pre><code>// Variabel dengan let
+let nama = "JavaScript";
+console.log(nama);
+
+// Variabel dengan const
+const PI = 3.14;
+console.log(PI);</code></pre>
+                        </div>
+                    </li>
+                    <li>
+                        <strong>Tipe Data</strong>: JavaScript memiliki tipe data seperti string, number, boolean, array, dan object.  
+                        <div class="code-box">
+                            <pre><code>// Contoh tipe data
+let angka = 10;       // Number
+let teks = "Halo";    // String
+let isAktif = true;   // Boolean
+let daftar = [1, 2, 3]; // Array
+let objek = { nama: "Budi", umur: 25 }; // Object
+</code></pre>
+                        </div>
+                    </li>
+                </ol>
+
+                <h2>Struktur Kontrol</h2>
+                <ol>
+                    <li>
+                        <strong>Kondisional</strong>: Gunakan <code>if</code>, <code>else</code>, dan <code>switch</code> untuk membuat keputusan.  
+                        <div class="code-box">
+                            <pre><code>let angka = 5;
+
+if (angka > 3) {
+    console.log("Angka lebih besar dari 3");
+} else {
+    console.log("Angka lebih kecil atau sama dengan 3");
+}</code></pre>
+                        </div>
+                    </li>
+                    <li>
+                        <strong>Perulangan</strong>: Gunakan <code>for</code>, <code>while</code>, dan <code>do...while</code> untuk mengulang blok kode.  
+                        <div class="code-box">
+                            <pre><code>for (let i = 0; i < 5; i++) {
+    console.log("Angka: " + i);
+}</code></pre>
+                        </div>
+                    </li>
+                </ol>
+
+                <h2>Fungsi dalam JavaScript</h2>
+                <p>Fungsi adalah blok kode yang dapat digunakan kembali. Anda bisa membuat fungsi menggunakan kata kunci <code>function</code>.</p>
+                <div class="code-box">
+                    <pre><code>function sapa(nama) {
+    return "Halo, " + nama + "!";
+}
+
+console.log(sapa("Dunia"));</code></pre>
+                </div>
+
+                <h2>Manipulasi DOM</h2>
+                <p>JavaScript memungkinkan Anda untuk mengubah elemen HTML secara dinamis. Contoh manipulasi DOM:</p>
+                <div class="code-box">
+                    <pre><code>// Ubah teks elemen dengan id 'judul'
+document.getElementById("judul").innerText = "Belajar JavaScript!";
+
+// Tambahkan elemen baru
+let elemenBaru = document.createElement("p");
+elemenBaru.innerText = "Ini paragraf baru.";
+document.body.appendChild(elemenBaru);</code></pre>
+                </div>
+
+                <h2>Event Handling</h2>
+                <p>Anda dapat menangani interaksi pengguna dengan event seperti klik, hover, dll.</p>
+                <div class="code-box">
+                    <pre><code>document.getElementById("btn").addEventListener("click", function() {
+    alert("Tombol diklik!");
+});</code></pre>
+                </div>
+                <button id="btn">Klik Saya</button>
+
+                <h2>Kesimpulan</h2>
+                <p>JavaScript adalah bahasa yang fleksibel dan penting untuk pengembangan web modern. Dengan memahami dasar-dasarnya, Anda dapat mulai membuat aplikasi web interaktif.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; HALI CODING</p>
+        </div>
+    </div>
+
+    <script>
+        // Contoh kode untuk event handling
+        document.getElementById("btn").addEventListener("click", function() {
+            alert("Selamat belajar JavaScript!");
+        });
+    </script>
+</body>
+</html>

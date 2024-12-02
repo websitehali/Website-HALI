@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial HTML Dasar</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="header">
+            <h1>Tutorial HTML Dasar</h1>
+            <p>Belajar HTML dari dasar hingga mahir!</p>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </div>
+
+        <div class="badan">
+            <div class="content">
+                <h2>Dasar-dasar HTML</h2>
+                <p>HTML (HyperText Markup Language) adalah bahasa standar untuk membuat halaman web. HTML menggunakan elemen-elemen yang dikenal sebagai *tag* untuk menstrukturkan konten web.</p>
+
+                <h3>1. Struktur Dasar HTML</h3>
+                <p>Berikut adalah struktur dasar sebuah dokumen HTML:</p>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="id"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Judul Halaman&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Selamat Datang di HTML&lt;/h1&gt;
+    &lt;p&gt;Ini adalah contoh halaman HTML.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+                </pre>
+
+                <h3>2. Elemen Heading</h3>
+                <p>Heading digunakan untuk memberikan judul atau subjudul pada sebuah halaman. Ada enam tingkatan heading dari <code>&lt;h1&gt;</code> hingga <code>&lt;h6&gt;</code>.</p>
+                <pre>
+&lt;h1&gt;Heading 1 (Paling Besar)&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+&lt;h5&gt;Heading 5&lt;/h5&gt;
+&lt;h6&gt;Heading 6 (Paling Kecil)&lt;/h6&gt;
+                </pre>
+
+                <h3>3. Elemen Paragraf</h3>
+                <p>Tag <code>&lt;p&gt;</code> digunakan untuk menulis teks dalam bentuk paragraf.</p>
+                <pre>
+&lt;p&gt;Ini adalah paragraf pertama.&lt;/p&gt;
+&lt;p&gt;Ini adalah paragraf kedua.&lt;/p&gt;
+                </pre>
+
+                <h3>4. Tautan (Links)</h3>
+                <p>Tag <code>&lt;a&gt;</code> digunakan untuk membuat hyperlink. Tautan dapat mengarahkan pengguna ke halaman lain, dokumen, atau sumber daya online.</p>
+                <pre>
+&lt;a href="https://www.google.com"&gt;Kunjungi Google&lt;/a&gt;
+                </pre>
+
+                <h3>5. Gambar</h3>
+                <p>Tag <code>&lt;img&gt;</code> digunakan untuk menampilkan gambar.</p>
+                <pre>
+&lt;img src="gambar.jpg" alt="Deskripsi gambar"&gt;
+                </pre>
+                <p><strong>Keterangan:</strong></p>
+                <ul>
+                    <li><code>src</code>: Lokasi file gambar.</li>
+                    <li><code>alt</code>: Deskripsi gambar (untuk SEO dan aksesibilitas).</li>
+                </ul>
+
+                <h3>6. Daftar</h3>
+                <p>HTML menyediakan dua jenis daftar:</p>
+                <ul>
+                    <li><strong>Daftar Tak Berurutan (<code>&lt;ul&gt;</code>)</strong>:</li>
+                    <pre>
+&lt;ul&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2&lt;/li&gt;
+  &lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ul&gt;
+                    </pre>
+                    <li><strong>Daftar Berurutan (<code>&lt;ol&gt;</code>)</strong>:</li>
+                    <pre>
+&lt;ol&gt;
+  &lt;li&gt;Item Pertama&lt;/li&gt;
+  &lt;li&gt;Item Kedua&lt;/li&gt;
+  &lt;li&gt;Item Ketiga&lt;/li&gt;
+&lt;/ol&gt;
+                    </pre>
+                </ul>
+
+                <h3>7. Tabel</h3>
+                <p>Tag <code>&lt;table&gt;</code> digunakan untuk membuat tabel.</p>
+                <pre>
+&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Nama&lt;/th&gt;
+    &lt;th&gt;Umur&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Ali&lt;/td&gt;
+    &lt;td&gt;25&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Budi&lt;/td&gt;
+    &lt;td&gt;30&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+                </pre>
+
+                <h3>8. Formulir</h3>
+                <p>Formulir digunakan untuk input data pengguna.</p>
+                <pre>
+&lt;form action="/submit" method="post"&gt;
+  &lt;label for="nama"&gt;Nama:&lt;/label&gt;
+  &lt;input type="text" id="nama" name="nama"&gt;
+  &lt;br&gt;
+  &lt;button type="submit"&gt;Kirim&lt;/button&gt;
+&lt;/form&gt;
+                </pre>
+
+                <h3>9. Komentar</h3>
+                <p>Komentar digunakan untuk menyisipkan catatan dalam kode HTML.</p>
+                <pre>
+&lt;!-- Ini adalah komentar --&gt;
+                </pre>
+
+                <h3>10. Elemen Multimedia</h3>
+                <p>HTML mendukung elemen audio dan video.</p>
+                <p><strong>Audio:</strong></p>
+                <pre>
+&lt;audio controls&gt;
+  &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+  Browser Anda tidak mendukung audio.
+&lt;/audio&gt;
+                </pre>
+                <p><strong>Video:</strong></p>
+                <pre>
+&lt;video controls&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+  Browser Anda tidak mendukung video.
+&lt;/video&gt;
+                </pre>
+
+                <h3>Kesimpulan</h3>
+                <p>HTML adalah fondasi utama pembuatan website. Dengan memahami elemen-elemen dasar ini, Anda dapat mulai membuat halaman web sederhana. Pelajari CSS untuk mempercantik tampilan dan JavaScript untuk menambahkan interaktivitas!</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>HALI CODING</p>
+        </div>
+    </div>
+</body>
+</html>

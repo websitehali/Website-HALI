@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial PHP Dasar</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="header">
+            <h1>Tutorial PHP Dasar</h1>
+            <p>Panduan lengkap untuk memahami dasar-dasar PHP</p>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </div>
+
+        <div class="badan">
+            <div class="content">
+                <h2>Pengenalan PHP</h2>
+                <p>PHP (Hypertext Preprocessor) adalah bahasa pemrograman server-side yang dirancang khusus untuk pengembangan web. Dengan PHP, Anda dapat membuat situs web dinamis dan interaktif.</p>
+
+                <h2>Dasar-Dasar PHP</h2>
+                <ol>
+                    <li>
+                        <strong>Menyisipkan PHP dalam HTML</strong>: PHP dapat ditulis di dalam file HTML dengan tag <code>&lt;?php ... ?&gt;</code>.  
+                        <div class="code-box">
+                            <pre><code>&lt;?php
+echo "Hello, World!";
+?&gt;</code></pre>
+                        </div>
+                    </li>
+                    <li>
+                        <strong>Variabel</strong>: Variabel di PHP diawali dengan tanda <code>$</code>.  
+                        <div class="code-box">
+                            <pre><code>&lt;?php
+$nama = "Halo, PHP!";
+echo $nama;
+?&gt;</code></pre>
+                        </div>
+                    </li>
+                    <li>
+                        <strong>Operator</strong>: PHP mendukung berbagai operator seperti aritmatika (<code>+</code>, <code>-</code>), perbandingan (<code>==</code>, <code>!=</code>), dan logika (<code>&&</code>, <code>||</code>).  
+                    </li>
+                </ol>
+
+                <h2>Struktur Dasar PHP</h2>
+                <ol>
+                    <li>
+                        <strong>Kondisional</strong>: Digunakan untuk membuat keputusan dalam kode.  
+                        <div class="code-box">
+                            <pre><code>&lt;?php
+$angka = 10;
+if ($angka > 5) {
+    echo "Angka lebih besar dari 5";
+} else {
+    echo "Angka lebih kecil atau sama dengan 5";
+}
+?&gt;</code></pre>
+                        </div>
+                    </li>
+                    <li>
+                        <strong>Perulangan</strong>: Digunakan untuk mengulang blok kode.  
+                        <div class="code-box">
+                            <pre><code>&lt;?php
+for ($i = 1; $i &lt;= 5; $i++) {
+    echo "Angka: " . $i . "&lt;br&gt;";
+}
+?&gt;</code></pre>
+                        </div>
+                    </li>
+                </ol>
+
+                <h2>Fungsi dalam PHP</h2>
+                <p>Fungsi adalah blok kode yang dapat digunakan kembali. PHP memiliki fungsi bawaan dan Anda juga dapat membuat fungsi sendiri.</p>
+                <div class="code-box">
+                    <pre><code>&lt;?php
+function sapa($nama) {
+    return "Halo, " . $nama . "!";
+}
+
+echo sapa("Dunia");
+?&gt;</code></pre>
+                </div>
+
+                <h2>Formulir dan PHP</h2>
+                <p>PHP sering digunakan untuk memproses data dari formulir HTML. Berikut adalah contoh sederhana:</p>
+                <div class="code-box">
+                    <pre><code>&lt;form method="post" action="proses.php"&gt;
+    Nama: &lt;input type="text" name="nama"&gt;
+    &lt;input type="submit" value="Kirim"&gt;
+&lt;/form&gt;</code></pre>
+                </div>
+                <p>Kode di atas mengirim data ke file <code>proses.php</code>, yang kemudian dapat diproses menggunakan PHP.</p>
+
+                <h2>Koneksi ke Database</h2>
+                <p>PHP sering digunakan bersama MySQL untuk mengelola database. Contoh koneksi ke database:</p>
+                <div class="code-box">
+                    <pre><code>&lt;?php
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db = "test";
+
+$conn = mysqli_connect($host, $user, $pass, $db);
+if (!$conn) {
+    die("Koneksi gagal: " . mysqli_connect_error());
+}
+echo "Koneksi berhasil!";
+?&gt;</code></pre>
+                </div>
+
+                <h2>Kesimpulan</h2>
+                <p>PHP adalah bahasa yang sangat fleksibel dan berguna untuk pengembangan web. Dengan mempelajari dasar-dasarnya, Anda bisa mulai membangun aplikasi web dinamis.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; HALI CODING</p>
+        </div>
+    </div>
+</body>
+</html>
